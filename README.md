@@ -42,7 +42,7 @@ This repository contains files that enable you to use Python to call the Geoclie
 
 # Import sample NYC address data (close to 6k records)
 
-url = "https://raw.githubusercontent.com/edgaralfonseca/python-oti-geoclient-api-v1/main/nyc_sample_almost_6k_addresses.csv"
+url = "https://raw.githubusercontent.com/edgaralfonseca/python-oti-geoclient-api-v2/main/nyc_sample_almost_6k_addresses.csv"
 
 nyc_address_df = pd.read_csv(url)
 
@@ -61,7 +61,7 @@ address_input_df = nyc_address_df.sample(n=1000, random_state=1).copy()
 with open('/content/OTI geoclient API primary key.txt', 'r') as file:
     subscription_key = file.read().strip()
 
-# Sdd your API subscription key to the headers parameter
+# Add your API subscription key to the headers parameter
 
 headers_param = {
     'Cache-Control': 'no-cache',
@@ -70,7 +70,7 @@ headers_param = {
 
 # Store the relevant url endpoint 
 
-address_api_url_param = "https://api.nyc.gov/geo/geoclient/v1/address.json"
+address_api_url_param = "https://api.nyc.gov/geo/geoclient/v2/address"
 
 # After reviewing the API documentation, specify the response columns you are interested in keeping
 
@@ -113,7 +113,7 @@ bin_input_df = oti_api_address_output_df[oti_api_address_output_df['buildingIden
 
 # Store the relevant url endpoint 
 
-bin_api_url_param = "https://api.nyc.gov/geo/geoclient/v1/bin.json"
+bin_api_url_param = "https://api.nyc.gov/geo/geoclient/v2/bin"
 
 # After reviewing the API documentation, specify the response columns you are interested in keeping
 
@@ -156,7 +156,7 @@ bbl_input_df = oti_api_address_output_df[oti_api_address_output_df['bblBoroughCo
 
 # Store the relevant url endpoint 
 
-bbl_api_url_param = "https://api.nyc.gov/geo/geoclient/v1/bbl.json"
+bbl_api_url_param = "https://api.nyc.gov/geo/geoclient/v2/bbl"
 
 # After reviewing the API documentation, specify the response columns you are interested in keeping
 
