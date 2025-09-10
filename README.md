@@ -1,6 +1,6 @@
 
 
-## Repo Name: python-nyc-oti-geoclient-api-v1
+## Repo Name: python-nyc-oti-geoclient-api-v2
 
 ## Owner
 
@@ -9,19 +9,16 @@
 
 ## Repo description
 
-This repository contains files that enable you to use Python to call the Geoclient v1.0 API maintained by the NYC Office of Technology and Innovation (OTI) to batch geocode data. There are also copies of the files I used to conduct a presentation on this to NYC government colleagues at the October 2024 Analytics Exchange (AnEx) Learning Summit hosted by NYC OTI.
+This repository contains files that enable you to use Python to call the Geoclient v2.0 API maintained by the NYC Office of Technology and Innovation (OTI) to batch geocode data.
 
 ## Key Repo files
 
-- [October 2024 AnEx Learning Summit Python Notebook](https://github.com/edgaralfonseca/python-nyc-oti-geoclient-api-v1/blob/main/Oct_2024_AnEx_Learning_Summit_Notebook.ipynb)
-- [October 2024 AnEx Learning Summit Deck](https://github.com/edgaralfonseca/python-nyc-oti-geoclient-api-v1/blob/main/Edgar%20AnEx%20Oct%202024%20Learning%20Summit%20Deck.pdf)
-- [nyc_oti_geoclient_api_1_0.py](https://raw.githubusercontent.com/edgaralfonseca/python-nyc-oti-geoclient-api-v1/main/nyc_oti_geoclient_api_1_0.py)
+- [nyc_oti_geoclient_api_2_0.py](https://raw.githubusercontent.com/edgaralfonseca/python-nyc-oti-geoclient-api-v1/main/nyc_oti_geoclient_api_1_0.py)
 
 ## Things to Know
 
 **Geoclient API description:** [https://api-portal.nyc.gov/api-details#api=geoclient&operation=geoclient](https://api-portal.nyc.gov/api-details#api=geoclient&operation=geoclient)  
-**NYC OTI Geoclient v2.0 documentation:** [https://mlipper.github.io/geoclient/docs/current/user-guide/](https://mlipper.github.io/geoclient/docs/current/user-guide/)    
-**Note, the 1.0 documentation is no longer avaiable, but 2.0 is documentation is applicable to 1.0**    
+**NYC OTI Geoclient v2.0 documentation:** [https://mlipper.github.io/geoclient/docs/current/user-guide/](https://mlipper.github.io/geoclient/docs/current/user-guide/)      
 **NYC OTI GitHub repo:** [https://github.com/CityOfNewYork/geoclient](https://github.com/CityOfNewYork/geoclient)
 
 ### Pre-requisites for you to use the API
@@ -36,7 +33,7 @@ This repository contains files that enable you to use Python to call the Geoclie
 - Sometimes there might be a several week delay in Geoclient reflecting what is in Geosupport.
 - Geoclient serves up a subset of attributes whereas Geosupport has all attributes.
 
-### How to use the 'nyc_oti_geoclient_api_1_0.py' python code
+### How to use the 'nyc_oti_geoclient_api_2_0.py' python code
 
 ```python
 
