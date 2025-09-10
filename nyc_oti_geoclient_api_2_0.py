@@ -2,13 +2,13 @@
 # LinkedIn: https://www.linkedin.com/in/edgar-alfonseca/
 # GitHub: https://github.com/edgaralfonseca
 #
-# This Python script creates three functions that enable you to geocode location information using the NYC OTI Geoclient API v1.0
+# This Python script creates three functions that enable you to geocode location information using the NYC OTI Geoclient API v2.0
 # 1) oti_geoclient_api_address_endpoint: Sends a pandas dataframe (with address data points) to the API and returns a copy of the pandas dataframe with API results
 # 2) oti_geoclient_api_bin_endpoint: Sends a pandas dataframe (with BIN data points) to the API and returns a copy of the pandas dataframe with API results
 # 3) oti_geoclient_api_bbl_endpoint: Sends a pandas dataframe (with BBL data points) to the API and returns a copy of the pandas dataframe with API results
 #
-# API description: https://api-portal.nyc.gov/api-details#api=geoclient&operation=geoclient
-# v1.0 documentation: https://api.nyc.gov/geoclient/v1/doc/
+# API description: https://api-portal.nyc.gov/api-details#api=geoclient-current-v2
+# v1.0 documentation: https://api.nyc.gov/geoclient/v2/doc/
 # GitHub repo: https://github.com/CityOfNewYork/geoclient
 
 # Pre-requisites
@@ -31,7 +31,7 @@ import time
 
 # Create a custom function to make API calls to the 'Address' endpoint
 
-def oti_geoclient_api_address_endpoint(api_endpoint, headers, df_name, df_key_field, housenum_input_col, street_input_col, boro_input_col=None, zip_input_col=None, response_columns=None):
+def oti_geoclient_api_v2_address_endpoint(api_endpoint, headers, df_name, df_key_field, housenum_input_col, street_input_col, boro_input_col=None, zip_input_col=None, response_columns=None):
     """
     Fetch data from the OTI geoclient API, merge the response with the original dataframe, and return the merged dataframe.
 
@@ -121,7 +121,7 @@ def oti_geoclient_api_address_endpoint(api_endpoint, headers, df_name, df_key_fi
 
 # Create a custom function to make API calls to the 'BIN' endpoint
 
-def oti_geoclient_api_bin_endpoint(api_endpoint, headers, df_name, df_key_field, api_input_column, response_columns=None):
+def oti_geoclient_api_v2_bin_endpoint(api_endpoint, headers, df_name, df_key_field, api_input_column, response_columns=None):
     """
     Fetch data from the OTI geoclient API, merge the response with the original dataframe, and return the merged dataframe.
 
@@ -200,7 +200,7 @@ def oti_geoclient_api_bin_endpoint(api_endpoint, headers, df_name, df_key_field,
 
 # Create a custom function to make API calls to the 'BBL' endpoint
 
-def oti_geoclient_api_bbl_endpoint(api_endpoint, headers, df_name, df_key_field, boro_input_col, block_input_col, lot_input_col, response_columns=None):
+def oti_geoclient_api_v2_bbl_endpoint(api_endpoint, headers, df_name, df_key_field, boro_input_col, block_input_col, lot_input_col, response_columns=None):
     """
     Fetch data from the OTI geoclient API, merge the response with the original dataframe, and return the merged dataframe.
 
