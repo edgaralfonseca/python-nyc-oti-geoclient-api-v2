@@ -13,12 +13,14 @@ This repository contains files that enable you to use Python to call the Geoclie
 
 ## Key Repo files
 
-- [nyc_oti_geoclient_api_2_0.py](https://raw.githubusercontent.com/edgaralfonseca/python-nyc-oti-geoclient-api-v1/main/nyc_oti_geoclient_api_1_0.py)
+- [nyc_oti_geoclient_api_2_0.py](https://raw.githubusercontent.com/edgaralfonseca/python-nyc-oti-geoclient-api-v2/refs/heads/main/nyc_oti_geoclient_api_2_0.py)
 
 ## Things to Know
 
-**Geoclient API description:** [https://api-portal.nyc.gov/api-details#api=geoclient&operation=geoclient](https://api-portal.nyc.gov/api-details#api=geoclient&operation=geoclient)  
-**NYC OTI Geoclient v2.0 documentation:** [https://mlipper.github.io/geoclient/docs/current/user-guide/](https://mlipper.github.io/geoclient/docs/current/user-guide/)      
+**Geoclient 2.0 API description:** [NYC API Portal](https://api-portal.nyc.gov/api-details#api=geoclient-current-v2)
+
+**NYC OTI Geoclient v2.0 documentation:** [https://mlipper.github.io/geoclient/docs/current/user-guide/](https://mlipper.github.io/geoclient/docs/current/user-guide/)
+
 **NYC OTI GitHub repo:** [https://github.com/CityOfNewYork/geoclient](https://github.com/CityOfNewYork/geoclient)
 
 ### Pre-requisites for you to use the API
@@ -58,7 +60,7 @@ address_input_df = nyc_address_df.sample(n=1000, random_state=1).copy()
 
 # Read your API subscription key from a text file
 
-with open('/content/OTI geoclient API primary key.txt', 'r') as file:
+with open('C:/.../OTI geoclient API primary key.txt', 'r') as file:
     subscription_key = file.read().strip()
 
 # Add your API subscription key to the headers parameter
@@ -70,7 +72,7 @@ headers_param = {
 
 # Store the relevant url endpoint 
 
-address_api_url_param = "https://api.nyc.gov/geo/geoclient/v2/address"
+address_api_url_param = "https://api.nyc.gov/geoclient/v2/address"
 
 # After reviewing the API documentation, specify the response columns you are interested in keeping
 
@@ -84,7 +86,7 @@ search_return_columns_to_keep = ['bbl', 'bblBoroughCode', 'bblTaxBlock',
 # Call the address endpoint API using the custom function
 # Save the result in a new pandas dataframe 'oti_api_address_output_df'
 
-oti_api_address_output_df = oti_geoclient_api_address_endpoint(
+oti_api_address_output_df = oti_geoclient_api_v2_address_endpoint(
     api_endpoint= address_api_url_param,
     headers= headers_param,
     df_name= address_input_df,
@@ -113,7 +115,7 @@ bin_input_df = oti_api_address_output_df[oti_api_address_output_df['buildingIden
 
 # Store the relevant url endpoint 
 
-bin_api_url_param = "https://api.nyc.gov/geo/geoclient/v2/bin"
+bin_api_url_param = "https://api.nyc.gov/geoclient/v2/bin"
 
 # After reviewing the API documentation, specify the response columns you are interested in keeping
 
@@ -127,7 +129,7 @@ bin_return_columns_to_keep = ['bbl', 'bblBoroughCode', 'bblTaxBlock',
 # Call the API using the custom function
 # Save the result in a new pandas dataframe 'oti_api_bin_output_df'
 
-oti_api_bin_output_df = oti_geoclient_api_bin_endpoint(
+oti_api_bin_output_df = oti_geoclient_api_v2_bin_endpoint(
     api_endpoint= bin_api_url_param,
     headers= headers_param,
     df_name= bin_input_df,
@@ -156,7 +158,7 @@ bbl_input_df = oti_api_address_output_df[oti_api_address_output_df['bblBoroughCo
 
 # Store the relevant url endpoint 
 
-bbl_api_url_param = "https://api.nyc.gov/geo/geoclient/v2/bbl"
+bbl_api_url_param = "https://api.nyc.gov/geoclient/v2/bbl"
 
 # After reviewing the API documentation, specify the response columns you are interested in keeping
 
@@ -172,7 +174,7 @@ bbl_return_columns_to_keep = ['bbl','buildingIdentificationNumber',
 # Call the API using the custom function
 # Save the result in a new pandas dataframe 'oti_api_bbl_output_df'
 
-oti_api_bbl_output_df = oti_geoclient_api_bbl_endpoint(
+oti_api_bbl_output_df = oti_geoclient_api_v2_bbl_endpoint(
     api_endpoint= bbl_api_url_param,
     headers= headers_param,
     df_name= bbl_input_df,
