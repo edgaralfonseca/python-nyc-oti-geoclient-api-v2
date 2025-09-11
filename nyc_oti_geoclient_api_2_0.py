@@ -1,5 +1,6 @@
-# Author: Edgar Alfonseca
-# LinkedIn: https://www.linkedin.com/in/edgar-alfonseca/
+# Authors: Edgar Alfonseca and Yuki Mitsuda
+# Edgar's LinkedIn: https://www.linkedin.com/in/edgar-alfonseca/
+# Yuki's LinkedIn: https://www.linkedin.com/in/yuki-mitsuda/
 # GitHub: https://github.com/edgaralfonseca
 #
 # This Python script creates three functions that enable you to geocode location information using the NYC OTI Geoclient API v2.0
