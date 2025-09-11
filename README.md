@@ -6,6 +6,7 @@
 
 - [@edgaralfonseca](https://github.com/edgaralfonseca)
 - [LinkedIn](https://www.linkedin.com/in/edgar-alfonseca/)
+- 2.0 update made by [Yuki Mitsuda](https://www.linkedin.com/in/yuki-mitsuda/)
 
 ## Repo description
 
